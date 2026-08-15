@@ -7,6 +7,16 @@
     --font-stack: Tahoma, 'Trebuchet MS', sans-serif;
 }
 
+@font-face {
+    font-family: "Futura Cyrillic Book";
+    src: url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.eot");
+    src: url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.svg#Futura Cyrillic Book")format("svg");
+}
+
 /*body to h4 based on typography section in BMES Style Guide. Tahoma is indended body font.*/
 body {
     font-family: var(--font-stack);
@@ -32,34 +42,52 @@ h4 {
     font-size: 22pt;
 }
 
-.container {
-    background-color: var(--color-bmes-orange);
-    font-family: var(--font-stack);
-    font-size: 14pt;
-}
-
-.navbar {
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-start;
-    padding-left: 0px;
-    padding-right: 32px;
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 80px;
-}
-
-.navbar ul {
+    z-index: 200;
+    background-color: var(--color-bmes-orange);
+    color: white;
+    font-family: var(--font-stack);
+    font-size: 14pt;
+    font-weight: bold;
+    box-sizing: border-box;
     display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
 }
 
-.container .navbar {
-    justify-content: space-between;
+.navbar-left-elements a {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.85rem;
 }
 
-.navbar ul li {
-    list-style-type: none;
+.navbar-left-elements img {
+    display: block;
+    height: 70px;
+    width: auto;
 }
 
-/*.navbar a{
-    
-}*/
+.navbar-right-elements {
+    margin-left: auto;
+}
+
+.navbar-right-elements ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0.85rem;
+}
+
+.navbar-container a:link {
+    color: white;
+    font-family: var(--font-stack);
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration-line: none;
+}
