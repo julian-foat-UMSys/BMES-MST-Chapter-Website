@@ -1,0 +1,141 @@
+@import url(var.css);
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 200;
+    background-color: var(--color-bmes-orange);
+    color: white;
+    font-family: var(--font-stack);
+    font-size: 14pt;
+    font-weight: bold;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20);
+}
+
+.navbar-left-elements a {
+    position: relative;
+    
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 0.85rem;
+}
+
+.navbar-left-elements a::before,
+.navbar-left-elements a::after {
+    content: "";
+    display: block;
+    z-index: 201;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1rem;
+
+    background-color: var(--color-bmes-orange);
+}
+
+.navbar-left-elements a:hover {
+    background-color: white;
+    transition: background-color 150ms ease;
+}
+
+.navbar-left-elements a::before {
+    left: -1rem;
+}
+
+.navbar-left-elements a::after {
+    right: -1rem;
+}
+
+.navbar-left-elements a:hover::before,
+.navbar-left-elements a:hover::after {
+    background-color: white;
+    transition: background-color 150ms ease;
+}
+
+.navbar-left-elements img {
+    display: block;
+    height: 70px;
+    width: auto;
+}
+
+.navbar-right-elements {
+    margin-left: auto;
+}
+
+.navbar-right-elements ul {
+    display: flex;
+    list-style: none;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0.85rem;
+}
+
+.navbar-right-elements li{
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    /*padding: 0 1rem;*/
+
+    transition: background-color 150ms ease,
+    color 150ms ease;
+}
+
+.navbar-right-elements li::before,
+.navbar-right-elements li::after {
+    content: "";
+    display: block;
+    z-index: 201;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1rem;
+
+    background-color: var(--color-bmes-orange);
+}
+
+.navbar-right-elements li::before {
+    left: -1rem;
+}
+
+.navbar-right-elements li::after {
+    right: -1rem;
+}
+
+.navbar-right-elements li a {
+    
+    z-index: 201;
+    
+    display: flex;
+    align-items: center;
+
+    color: inherit;
+    font-family: var(--font-stack);
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+
+
+
+.navbar-right-elements li:hover {
+    z-index: 202;
+    background-color: white;
+    color: var(--color-bmes-orange);
+}
+
+.navbar-right-elements li:hover::before,
+.navbar-right-elements li:hover::after {
+    background-color: white;
+    z-index: 202;
+    transition: background-color 150ms ease;
+}

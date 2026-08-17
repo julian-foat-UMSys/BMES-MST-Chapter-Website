@@ -1,0 +1,18 @@
+:root {
+    --color-bmes-gray: #363639;
+    --color-bmes-orange: #f7941e;
+    --color-bmes-yellow: #ffc20e;
+    --color-bmes-blue: #006991;
+
+    --font-stack: Tahoma, 'Trebuchet MS', sans-serif;
+}
+
+@font-face {
+    font-family: "Futura Cyrillic Book";
+    src: url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.eot");
+    src: url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cc17f68d3bbbdd07678bc70472ac6523.svg#Futura Cyrillic Book")format("svg");
+}

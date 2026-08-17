@@ -1,0 +1,26 @@
+/*body to h4 based on typography section in BMES Style Guide. Tahoma is indended body font.*/
+@import url(var.css);
+
+body {
+    font-family: var(--font-stack);
+    font-size: 14pt
+}
+
+h1 {
+    font-size: 28pt;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 26pt;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 22pt;
+}

@@ -20,7 +20,7 @@
 /*body to h4 based on typography section in BMES Style Guide. Tahoma is indended body font.*/
 body {
     font-family: var(--font-stack);
-    font-weight: 14pt
+    font-size: 14pt
 }
 
 h1 {
@@ -61,10 +61,44 @@ h4 {
 }
 
 .navbar-left-elements a {
+    position: relative;
+    
     height: 80px;
     display: flex;
     align-items: center;
     padding: 0 0.85rem;
+}
+
+.navbar-left-elements a::before,
+.navbar-left-elements a::after {
+    content: "";
+    display: block;
+    z-index: 201;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1rem;
+
+    background-color: var(--color-bmes-orange);
+}
+
+.navbar-left-elements a:hover {
+    background-color: white;
+    transition: background-color 150ms ease;
+}
+
+.navbar-left-elements a::before {
+    left: -1rem;
+}
+
+.navbar-left-elements a::after {
+    right: -1rem;
+}
+
+.navbar-left-elements a:hover::before,
+.navbar-left-elements a:hover::after {
+    background-color: white;
+    transition: background-color 150ms ease;
 }
 
 .navbar-left-elements img {
@@ -80,14 +114,70 @@ h4 {
 .navbar-right-elements ul {
     display: flex;
     list-style: none;
+    align-items: stretch;
     gap: 2rem;
     padding: 0.85rem;
 }
 
-.navbar-container a:link {
-    color: white;
+.navbar-right-elements li{
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    /*padding: 0 1rem;*/
+
+    transition: background-color 150ms ease,
+    color 150ms ease;
+}
+
+.navbar-right-elements li::before,
+.navbar-right-elements li::after {
+    content: "";
+    display: block;
+    z-index: 201;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1rem;
+
+    background-color: var(--color-bmes-orange);
+}
+
+.navbar-right-elements li::before {
+    left: -1rem;
+}
+
+.navbar-right-elements li::after {
+    right: -1rem;
+}
+
+.navbar-right-elements li a {
+    
+    z-index: 201;
+    
+    display: flex;
+    align-items: center;
+
+    color: inherit;
     font-family: var(--font-stack);
     font-size: 14pt;
     font-weight: bold;
     text-decoration-line: none;
+}
+
+
+
+.navbar-right-elements li:hover {
+    z-index: 202;
+    background-color: white;
+    color: var(--color-bmes-orange);
+}
+
+.navbar-right-elements li:hover::before,
+.navbar-right-elements li:hover::after {
+    background-color: white;
+    z-index: 202;
+    transition: background-color 150ms ease;
 }
