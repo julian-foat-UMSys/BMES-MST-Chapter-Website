@@ -1,10 +1,21 @@
+@import url('https://fonts.cdnfonts.com/css/futura-pt');
+@import url('https://fonts.googleapis.com/css?family=EB Garamond');
+
 :root {
     --color-bmes-gray: #363639;
-    --color-bmes-orange: #f7941e;
-    --color-bmes-yellow: #ffc20e;
-    --color-bmes-blue: #006991;
+    --color-bmes-orange: #fe7a15;
+    --color-bmes-yellow: #ffc20e; /*Don't use this. It's outdated.*/
+    --color-bmes-blue: #0191b4;
+    --color-bmes-white: white; /*Or just use white or gray below*/
+    --color-bmes-gray: #fafafa;
 
-    --font-stack: Tahoma, 'Trebuchet MS', sans-serif;
+    --expressive-blue: #35bbca;
+    --expressive-green: #94b447;
+    --expressive-yellow: #f8d90f;
+    --expressive-violet: #211f56;
+
+    --font-stack: "Futura PT", century, sans-serif;
+    --secondary-font-stack: "EB Garamond", garamond, serif;
 }
 
 @font-face {
