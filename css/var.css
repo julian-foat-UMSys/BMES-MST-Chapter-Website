@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=EB Garamond');
 
 :root {
-    --color-bmes-gray: #363639;
+    /*--color-bmes-gray: #363639;*/
     --color-bmes-orange: #fe7a15;
     --color-bmes-yellow: #ffc20e; /*Don't use this. It's outdated.*/
     --color-bmes-blue: #0191b4;

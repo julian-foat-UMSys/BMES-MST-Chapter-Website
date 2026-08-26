@@ -8,7 +8,7 @@
     height: 80px;
     z-index: 200;
     background-color: var(--color-bmes-orange);
-    color: white;
+    color: var(--color-bmes-white);
     font-family: var(--font-stack);
     font-size: 14pt;
     font-weight: bold;
@@ -138,4 +138,8 @@
     background-color: white;
     z-index: 202;
     transition: background-color 150ms ease;
+}
+
+.navbar-spacer {
+    height: 240px;
 }
