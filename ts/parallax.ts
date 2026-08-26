@@ -1,6 +1,18 @@
-const parallax = document.getElementById("par") as HTMLElement;
+const bgImage = document.querySelector('.bg-image') as HTMLElement;
+const speed = 0.4;
 
-window.addEventListener("scroll", function() {
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = offset * 0.7 + "px";
-})
+function sizeBackground() {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const buffer = maxScroll * speed;
+    bgImage.style.height = `${window.innerHeight + buffer}px`;
+}
+
+function updateParallax() {
+    bgImage.style.transform = `translateY(${-window.scrollY * speed}px)`;
+}
+
+sizeBackground();
+window.addEventListener('resize', sizeBackground);
+window.addEventListener('scroll', () => {
+    requestAnimationFrame(updateParallax);
+}, {passive: true});

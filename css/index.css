@@ -1,9 +1,32 @@
 @import url(var.css);
 
+/*Background image*/
 .par-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 100vh;
-    display: flex;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bg-image {
+    top: -15%;
+    left: 0;
+    height: 150%;
+    width: auto;
+    /*If you're a dev when the Bioplex gets built, make sure you replace this image with a hi-res version of that.*/
     background: url(/style_assets/berty.webp);
     background-size: cover;
+    background-position: center;
+    will-change: transform;
+    background-color: rgba(109, 154, 203, 0.5);
+    background-blend-mode: luminosity;
+}
+
+.bg-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.65));
 }
